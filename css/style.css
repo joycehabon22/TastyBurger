@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333333;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header-container {
+    width: 950px;
+    max-width: 90%;
+    height: 105px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.burger-icon {
+    font-size: 25px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.85;
+}
+
+.logo-text span {
+    color: #e30613;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.logo-text strong {
+    color: #f08a00;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e30613;
+}
+
+.cart-button {
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e30613;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.hero h1 {
+    color: #e30613;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 42px;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    width: 480px;
+    max-width: 90%;
+    margin: auto;
+    color: #999999;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.burger-container {
+    width: 950px;
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding-bottom: 65px;
+}
+
+.burger-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.burger-card img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.burger-info {
+    position: relative;
+    min-height: 137px;
+    padding: 12px;
+}
+
+.rating {
+    color: #ffbd32;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.favorite {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: #aaaaaa;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.favorite:hover,
+.favorite.active {
+    color: #e30613;
+}
+
+.burger-info h2 {
+    color: #222222;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.burger-info p {
+    color: #999999;
+    font-size: 11px;
+    line-height: 1.45;
+    min-height: 32px;
+}
+
+.price {
+    display: inline-block;
+    margin-top: 9px;
+    padding: 6px 9px;
+    border: none;
+    border-radius: 3px;
+    background: #71321d;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.price:hover {
+    background: #4f2114;
+}
+
+.price.added {
+    background: #228b22;
+}
+
+footer {
+    padding: 24px 0;
+    background: #fafafa;
+    text-align: center;
+    color: #999999;
+    font-size: 11px;
+}
+
+@media (max-width: 900px) {
+    .burger-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .header-container {
+        height: 85px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+        background: #ffffff;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 28px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .burger-container {
+        grid-template-columns: 1fr;
+    }
+
+    .burger-card img {
+        height: 230px;
+    }
+}
